@@ -14,8 +14,16 @@ function addEvent() {
 
     // Check if the month, day, and year form a valid date
     let eventDate = new Date(year, month - 1, day);
+    let today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     if (eventDate.getMonth() !== month - 1 || eventDate.getDate() !== day) {
         alert("Invalid date. Please check your inputs.");
+        return;
+    }
+
+    if (eventDate < today) {
+        alert("You cannot enter a past date. Please select a future date.");
         return;
     }
 
@@ -47,7 +55,7 @@ function loadEvents() {
         li.innerHTML = `
             <span class="event-name">${event.name}</span>
             <span class="event-date">Date: ${eventDate}</span>
-            <span class="time-remaining">${timeRemaining} remaining</span>
+            <span class="time-remaining">${timeRemaining}</span>
             <button onclick="editEvent(${index})">✏️ Edit</button>
             <button onclick="deleteEvent(${index})">❌ Delete</button>
         `;
@@ -86,8 +94,16 @@ function saveEvent(index) {
     }
 
     let newDate = new Date(newYear, newMonth - 1, newDay);
+    let today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     if (newDate.getMonth() !== newMonth - 1 || newDate.getDate() !== newDay) {
         alert("Invalid date. Please check your inputs.");
+        return;
+    }
+
+    if (newDate < today) {
+        alert("You cannot enter a past date. Please select a future date.");
         return;
     }
 
@@ -100,7 +116,13 @@ function saveEvent(index) {
 
 function calculateTimeRemaining(eventDate) {
     let now = new Date();
+    now.setHours(0, 0, 0, 0);
     let targetDate = new Date(eventDate);
+    targetDate.setHours(0, 0, 0, 0);
+
+    if (targetDate.getTime() === now.getTime()) {
+        return "Event is Today!";
+    }
 
     let years = targetDate.getFullYear() - now.getFullYear();
     let months = targetDate.getMonth() - now.getMonth();
