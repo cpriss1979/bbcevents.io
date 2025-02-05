@@ -57,7 +57,7 @@ ul {
 button {
     margin-top: auto;
     align-self: center;
-    background-color: blueviolet;
+    background-color: #28a745; /* Green */
     color: white;
     border: none;
     border-radius: 5px;
@@ -72,22 +72,28 @@ button:hover {
 
 li {
     display: flex;
-    flex-direction: column; /* Stacks content vertically */
+    flex-direction: column;
     align-items: center;
-    background: #b2bdc9;
+    background: #ddd;
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
-    height: auto;
     font-size: 14px;
-    overflow: hidden;
+    text-align: center;
+}
+
+li input {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 14px;
     text-align: center;
 }
 
 li .event-name {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px; /* Adds space between name and date */
+    margin-bottom: 5px;
 }
 
 li .event-date {
@@ -103,7 +109,8 @@ li .time-remaining {
 }
 
 li button {
-    background-color: #ff4747;
+    margin-top: 5px;
+    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -112,9 +119,41 @@ li button {
     padding: 5px 10px;
 }
 
+li button:hover {
+    background-color: #0056b3;
+}
+
+li button:last-child {
+    background-color: #ff4747;
+}
+
+li button:last-child:hover {
+    background-color: #ff2d2d;
+}
+
+.edit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.edit-row label {
+    font-weight: bold;
+    margin-right: 10px;
+    white-space: nowrap; /* Prevents labels from wrapping */
+}
+
+.edit-row input {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
 
 
 
 h1 {
-    color: white;
+    color: white; /* make header color white */
 }
