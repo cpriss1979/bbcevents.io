@@ -2,11 +2,19 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
-    background-image: url("sky.jpg"); /* Correct way to add an image */
-    background-size: cover; /* Makes sure the image covers the entire background */
+    background-image: url("sky.jpg"); /* Background image */
+    background-size: cover; /* Ensures the image covers the entire viewport */
     background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 100vh; /* Makes sure the body fills the full height of the screen */
+    width: 100vw; /* Ensures full width */
+    overflow: hidden; /* Prevents scrolling issues */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex;
+    flex-direction: column;
 }
+
 
 .input-section {
     margin-bottom: 20px;
