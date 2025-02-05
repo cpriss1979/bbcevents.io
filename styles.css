@@ -8,22 +8,6 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-    /* Background image */
-    background: transparent; /* Make container clear- only see body background */
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-}
-
 .input-section {
     margin-bottom: 20px;
 }
@@ -176,8 +160,13 @@ h1 {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
+    /* Background image */
+    background: transparent; /* Make container clear- only see body background */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
 /* Make inputs and buttons more touch-friendly */
 input, button {
     width: 100%; /* Full width for better mobile usability */
