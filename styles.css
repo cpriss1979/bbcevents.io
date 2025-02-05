@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
+
 .container {
     max-width: 400px;
     margin: 50px auto;
@@ -17,7 +18,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
     /* Background image */
-    background-image: url('sky.jpg'); /* Replace with your image URL */
+    background: transparent; /* Make container clear- only see body background */
     background-size: cover; /* Ensures the image covers the entire container */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
