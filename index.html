@@ -9,13 +9,21 @@
 <body>
     <div class="container">
         <h1>Days Until...</h1>
-        
+
         <div class="input-section">
-            <input type="text" id="eventName" placeholder="Event Name">
-            <input type="date" id="eventDate">
+            <!-- Auto-resizing textarea for event name -->
+            <textarea id="eventName" placeholder="Event Name" oninput="autoResizeHeight(this)"></textarea>
+            
+            <!-- Separate input fields for month, day, and year -->
+            <div class="date-inputs">
+                <input type="number" id="eventMonth" placeholder="Month" min="1" max="12" oninput="autoResize(this)">
+                <input type="number" id="eventDay" placeholder="Day" min="1" max="31" oninput="autoResize(this)">
+                <input type="number" id="eventYear" placeholder="Year" min="2025" max="9999" oninput="autoResize(this)">
+            </div>
+
             <button onclick="addEvent()">Add Event</button>
         </div>
-        
+
         <ul id="eventList"></ul>
     </div>
 
