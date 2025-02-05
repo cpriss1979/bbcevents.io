@@ -162,3 +162,79 @@ li button:last-child:hover {
 h1 {
     color: white; /* make header color white */
 }
+
+
+
+
+
+
+/* Ensure the container scales properly on all screen sizes */
+.container {
+    max-width: 90%; /* Adjust width dynamically */
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make inputs and buttons more touch-friendly */
+input, button {
+    width: 100%; /* Full width for better mobile usability */
+    padding: 12px;
+    font-size: 16px; /* Increase font size for readability */
+    margin: 5px 0;
+}
+
+/* Adjust list items for mobile screens */
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Ensure labels and inputs stay aligned side by side */
+.edit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Improve button layout for smaller screens */
+button {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Make text larger and prevent overflow */
+.event-name, .event-date, .time-remaining {
+    font-size: 18px;
+    word-wrap: break-word; /* Prevent long words from overflowing */
+}
+
+/* Ensure proper spacing between elements */
+button {
+    margin-top: 8px;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .edit-row {
+        flex-direction: column; /* Stack label and input for better spacing */
+        align-items: flex-start;
+    }
+
+    input {
+        font-size: 14px; /* Adjust input size for better fit */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
