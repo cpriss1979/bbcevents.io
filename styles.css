@@ -149,25 +149,10 @@ li button:last-child:hover {
     text-align: center;
 }
 
-
-
 h1 {
     color: white; /* make header color white */
 }
 
-
-
-
-
-
-/* Ensure the container scales properly on all screen sizes */
-.container {
-    max-width: 90%; /* Adjust width dynamically */
-    margin: 20px auto;
-    background: transparent;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     /* Background image */
     background: transparent; /* Make container clear- only see body background */
@@ -233,5 +218,59 @@ button {
         font-size: 14px;
         padding: 10px;
     }
+}
+
+
+
+
+
+
+textarea {
+    width: 100%; /* Ensures it stays within its container */
+    min-height: 40px;
+    max-height: 150px;
+    overflow-y: auto; /* Allows vertical scrolling if needed */
+    overflow-x: hidden; /* Prevents horizontal expansion */
+    resize: none; /* Prevents manual resizing */
+    font-size: 16px;
+    padding: 5px;
+    box-sizing: border-box; /* Prevents width issues */
+    word-wrap: break-word; /* Ensures text wraps within the box */
+    white-space: pre-wrap; /* Maintains spacing and line breaks */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    background-image: url("sky.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.output-box {
+    width: 100%;
+    max-width: 400px;
+    max-height: 60vh; /* Limits max height to avoid breaking layout */
+    overflow-y: auto; /* Enables vertical scrolling inside event list */
+    overflow-x: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
