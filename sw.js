@@ -1,6 +1,6 @@
 self.addEventListener("install", (event) => {
     event.waitUntil(
-        caches.open("flab-to-fab-cache").then((cache) => {
+        caches.open("DaysUntil-cache").then((cache) => {
             return cache.addAll([
                 "/",
                 "/index.html",
