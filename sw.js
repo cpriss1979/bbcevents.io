@@ -6,8 +6,8 @@ self.addEventListener("install", (event) => {
                 "/index.html",
                 "/styles.css",
                 "/app.js",
-                "logo.png",
-                "logo.png"
+                "zibby.png",
+                "zibby.png"
             ]);
         })
     );
