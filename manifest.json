@@ -1,8 +1,8 @@
 {
   "id": "/",
   "name": "From Flab to Fab",
-  "short_name": "FlabFab",
-  "description": "Your ultimate guide to fitness, wellness, and weight loss.",
+  "short_name": "DaysUntil",
+  "description": "Your much needed countdown calculator. Keep track of all those important dates you want to remember... concerts, anniversaries, vacations, an astroid, anything you can think of.",
   "start_url": "/index.html",
   "display": "standalone",
   "display_override": ["window-controls-overlay"],
