@@ -152,7 +152,7 @@ li button:last-child:hover {
 }
 
 h1 {
-    color: green; /* make header color white */
+    color: rgb(86, 243, 86); /* make header color white */
 }
 
 
@@ -275,4 +275,3 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
